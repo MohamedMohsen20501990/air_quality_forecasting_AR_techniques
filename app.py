@@ -1,9 +1,8 @@
 import streamlit as st
-import pickle
+import joblib
 import pandas as pd
 
-with open ("models/arima_model.pkl","rb") as f:
-    model = pickle.load(f)
+model = joblib.load("models/arima_model1.pkl")
     
 st.title("Arima model Forecasting") 
 st.subheader("Air quality in Nairobi")
